@@ -27,13 +27,8 @@ public class WelcomeActivity extends AppCompatActivity {
                 .setDuration(1500);
     }
 
-    public void nextsamplesatu(View view){
-        Intent intent = new Intent(WelcomeActivity.this, SampleSatu.class);
-        startActivityForResult(intent,0);
-    }
-
-    public void nextsampledua(View view){
-        Intent intent = new Intent(WelcomeActivity.this, SampleDua.class);
+    public void tampilmenu(View view){
+        Intent intent = new Intent(WelcomeActivity.this, MenuActivity.class);
         startActivityForResult(intent,0);
     }
 

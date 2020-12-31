@@ -17,7 +17,7 @@ public class SampleDua extends AppCompatActivity {
     AudioManager audiomanager;
 
     public void klikkembalidua(View view){
-        Intent intent = new Intent(SampleDua.this, WelcomeActivity.class);
+        Intent intent = new Intent(SampleDua.this, MenuActivity.class);
         startActivityForResult(intent,0);
     }
 
@@ -33,7 +33,7 @@ public class SampleDua extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sampledua);
+        setContentView(R.layout.activity_sample_dua);
 
         //implementasi volume sound controller
         audiomanager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
