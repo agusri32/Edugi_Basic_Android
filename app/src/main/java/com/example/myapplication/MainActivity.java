@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void loginFunction(View view){
 
+        //simple login using hardcode
         EditText myUsername = (EditText) findViewById(R.id.editTextUsername);
         EditText myPassword = (EditText) findViewById(R.id.editTextPassword);
 
@@ -26,8 +27,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "LOGIN SUKSES", Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(MainActivity.this, WelcomeActivity.class);
-            MainActivity.this.startActivity(intent);
-            finish();
+            startActivityForResult(intent,0);
         }else{
             //jika login gagal
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
