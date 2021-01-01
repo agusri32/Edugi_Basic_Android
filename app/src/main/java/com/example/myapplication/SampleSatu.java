@@ -4,13 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.MediaController;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import java.util.ArrayList;
+
+import static java.util.Arrays.asList;
 
 public class SampleSatu extends AppCompatActivity {
 
@@ -35,7 +40,10 @@ public class SampleSatu extends AppCompatActivity {
 
         //implementasi list view
         ListView myListView = (ListView) findViewById(R.id.ListViewRukunIslam);
-        ArrayList<String> rukunIslam = new ArrayList<String>();
+        //final ArrayList<String> rukunIslam = new ArrayList<String>(asList("Syahadat","Sholat","Zakat","Puasa","Haji"));
+
+        //Alternatif untuk pendeklarasian list array
+        final ArrayList<String> rukunIslam = new ArrayList<String>();
         rukunIslam.add("1.Mengucapkan Syahadat");
         rukunIslam.add("2.Mendirikan Sholat");
         rukunIslam.add("3.Membayarkan Zakat");
@@ -44,5 +52,13 @@ public class SampleSatu extends AppCompatActivity {
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,rukunIslam);
         myListView.setAdapter(arrayAdapter);
+
+        myListView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,int position, long id){
+                Log.i("Rukun Islam : ",rukunIslam.get(position));
+                Toast.makeText(getApplicationContext(), "Rukun Islam : "+rukunIslam.get(position) , Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

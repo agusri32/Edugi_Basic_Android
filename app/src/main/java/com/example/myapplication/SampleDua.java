@@ -9,6 +9,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.SeekBar;
 
 public class SampleDua extends AppCompatActivity {
@@ -40,14 +41,13 @@ public class SampleDua extends AppCompatActivity {
         int maxVolume = audiomanager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
         int curVolume = audiomanager.getStreamVolume(AudioManager.STREAM_MUSIC);
 
-        SeekBar volumeControl = (SeekBar) findViewById(R.id.seekBar);
-        volumeControl.setMax(maxVolume);
-        volumeControl.setProgress(curVolume);
+        SeekBar timesTableSeekBar = (SeekBar) findViewById(R.id.timesTableSeekBar);
+        timesTableSeekBar.setMax(maxVolume);
+        timesTableSeekBar.setProgress(curVolume);
 
-        volumeControl.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        timesTableSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                Log.i("Seeking value",Integer.toString(progress));
                 audiomanager.setStreamVolume(AudioManager.STREAM_MUSIC,progress,0);
             }
 

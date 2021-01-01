@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".SampleEmpat"></activity>
+
+        <activity android:name=".SampleEmpat" />
         <activity android:name=".SampleTiga" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".SampleDua" />

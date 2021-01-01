@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class WelcomeActivity extends AppCompatActivity {
 
@@ -43,7 +44,10 @@ public class WelcomeActivity extends AppCompatActivity {
         buttonLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //jika logout berhasil
                 Log.i("Info","Berhasil Logout");
+                Toast.makeText(getApplicationContext(), "LOGOUT SUKSES", Toast.LENGTH_SHORT).show();
+
                 Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
                 startActivityForResult(intent,0);
             }

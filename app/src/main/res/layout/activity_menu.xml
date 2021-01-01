@@ -1,27 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingTop="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp"
     tools:context=".MenuActivity">
 
-    <Button
-        android:id="@+id/buttonKembaliMenu"
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="664dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginBottom="70dp"
-        android:onClick="klikkembalimenu"
-        android:text="Kembali"
-        app:backgroundTint="#03A9F4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="63dp"
+        android:paddingBottom="10dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btnsample_satu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center_horizontal"
+            android:paddingHorizontal="50dp"
+            android:backgroundTint="#3F51B5"
+            android:onClick="nextsample_satu"
+            android:width="165dp"
+            android:text="Video" />
+
+        <Button
+            android:id="@+id/btnsample_dua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center_horizontal"
+            android:paddingHorizontal="50dp"
+            android:backgroundTint="#3F51B5"
+            android:onClick="nextsample_dua"
+            android:width="165dp"
+            android:text="Audio" />
+
+        <Button
+            android:id="@+id/btnsample_tiga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center_horizontal"
+            android:paddingHorizontal="50dp"
+            android:backgroundTint="#3F51B5"
+            android:onClick="nextsample_tiga"
+            android:width="165dp"
+            android:text="Timer" />
+
+        <Button
+            android:id="@+id/btnsample_empat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center_horizontal"
+            android:width="165dp"
+            android:backgroundTint="#009688"
+            android:onClick="nextsample_empat"
+            android:paddingHorizontal="50dp"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/btnsample_lima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center_horizontal"
+            android:paddingHorizontal="50dp"
+            android:backgroundTint="#009688"
+            android:width="165dp"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/btnsample_enam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center_horizontal"
+            android:paddingHorizontal="50dp"
+            android:backgroundTint="#009688"
+            android:width="165dp"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/btnsample_tujuh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center_horizontal"
+            android:paddingHorizontal="50dp"
+            android:backgroundTint="#009688"
+            android:width="165dp"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/btnsample_delapan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center_horizontal"
+            android:paddingHorizontal="50dp"
+            android:backgroundTint="#009688"
+            android:width="165dp"
+            android:text="Button" />
+
+    </GridLayout>
+
+    <include
+        layout="@layout/layout_menu_atas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
