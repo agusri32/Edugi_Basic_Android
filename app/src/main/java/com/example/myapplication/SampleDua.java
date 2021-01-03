@@ -9,6 +9,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.ListView;
 import android.widget.SeekBar;
 
@@ -17,7 +18,7 @@ public class SampleDua extends AppCompatActivity {
     MediaPlayer audioplayer;
     AudioManager audiomanager;
 
-    public void klikkembalidua(View view){
+    public void klikkembalimenu(View view){
         Intent intent = new Intent(SampleDua.this, MenuActivity.class);
         startActivityForResult(intent,0);
     }
@@ -33,6 +34,11 @@ public class SampleDua extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //menghilangkan action bar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getSupportActionBar().hide();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sample_dua);
 

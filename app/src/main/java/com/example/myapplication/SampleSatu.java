@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -19,13 +20,18 @@ import static java.util.Arrays.asList;
 
 public class SampleSatu extends AppCompatActivity {
 
-    public void klikkembalisatu(View view){
+    public void klikkembalimenu(View view){
         Intent intent = new Intent(SampleSatu.this, MenuActivity.class);
         startActivityForResult(intent,0);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //menghilangkan action bar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getSupportActionBar().hide();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sample_satu);
 

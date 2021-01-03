@@ -76,10 +76,10 @@
             android:layout_columnWeight="1"
             android:layout_gravity="center_horizontal"
             android:width="165dp"
-            android:backgroundTint="#009688"
+            android:backgroundTint="#3F51B5"
             android:onClick="nextsample_empat"
             android:paddingHorizontal="50dp"
-            android:text="Button" />
+            android:text="MAP" />
 
         <Button
             android:id="@+id/btnsample_lima"
@@ -140,7 +140,8 @@
     </GridLayout>
 
     <include
-        layout="@layout/layout_menu_atas"
+        layout="@layout/layout_menu_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
 </RelativeLayout>

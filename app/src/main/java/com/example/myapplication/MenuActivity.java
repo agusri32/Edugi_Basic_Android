@@ -36,12 +36,12 @@ public class MenuActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
 
         //menghilangkan action bar
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
 
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
     }
 }
