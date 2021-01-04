@@ -7,8 +7,51 @@
     tools:context=".SampleTiga">
 
     <include
+        android:id="@+id/include3"
         layout="@layout/layout_menu_back"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <SeekBar
+        android:id="@+id/timerSeekBar"
+        android:layout_width="331dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/include3"
+        app:layout_constraintStart_toStartOf="@+id/include3"
+        app:layout_constraintTop_toBottomOf="@+id/include3" />
+
+    <ImageView
+        android:id="@+id/timerImageView"
+        android:layout_width="345dp"
+        android:layout_height="216dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="@+id/timerSeekBar"
+        app:layout_constraintStart_toStartOf="@+id/timerSeekBar"
+        app:layout_constraintTop_toBottomOf="@+id/timerSeekBar"
+        app:srcCompat="@drawable/logojam" />
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:text="0:30"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="@+id/timerSeekBar"
+        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintStart_toStartOf="@+id/timerSeekBar"
+        app:layout_constraintTop_toBottomOf="@+id/timerSeekBar" />
+
+    <Button
+        android:id="@+id/timerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:onClick="controltimer"
+        android:text="GO!"
+        app:layout_constraintEnd_toEndOf="@+id/timerImageView"
+        app:layout_constraintStart_toStartOf="@+id/timerImageView"
+        app:layout_constraintTop_toBottomOf="@+id/timerImageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
