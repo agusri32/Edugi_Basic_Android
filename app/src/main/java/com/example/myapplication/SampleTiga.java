@@ -3,42 +3,74 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
 public class SampleTiga extends AppCompatActivity {
     SeekBar timerSeekBar;
     TextView timerTextView;
+    Button timerButton;
+    Boolean counterIsActive = false;
+    CountDownTimer countDownTimer;
+
+    public void resetTimer(){
+        timerTextView.setText("0:30");
+        timerSeekBar.setProgress(30);
+        timerButton.setText("Go!");
+        timerSeekBar.setEnabled(true);
+        counterIsActive = false;
+        countDownTimer.cancel();
+    }
 
     public void updateTimer(int secondLeft){
         int minutes = (int) secondLeft / 60;
         int seconds = secondLeft-minutes*60;
 
-        String secondString = Integer.toString(seconds);
-        if(secondString=="0"){
+        String secondString;
+        if(seconds==0){
             secondString = "00";
+        }else{
+            secondString = Integer.toString(seconds);
         }
 
         timerTextView.setText(Integer.toString(minutes) + ":" + secondString);
     }
 
     public void controltimer(View view){
-        new CountDownTimer(timerSeekBar.getProgress()*1000,1000){
 
-            @Override
-            public void onTick(long millisUntilFinished) {
-                updateTimer((int)millisUntilFinished/1000);
-            }
+        if(counterIsActive==false) {
 
-            @Override
-            public void onFinish() {
+            counterIsActive = true;
+            timerSeekBar.setEnabled(false);
+            timerButton.setText("Stop");
 
-            }
-        };
+            countDownTimer = new CountDownTimer(timerSeekBar.getProgress()*1000+100, 1000) {
+
+                @Override
+                public void onTick(long millisUntilFinished) {
+                    updateTimer((int) millisUntilFinished/1000);
+                }
+
+                @Override
+                public void onFinish() {
+                    timerTextView.setText("0:00");
+                    Log.i("finished", "timer done");
+
+                    MediaPlayer mplayer = MediaPlayer.create(getApplicationContext(), R.raw.alarm);
+                    mplayer.start();
+                }
+            }.start();
+
+        }else{
+            resetTimer();
+        }
     }
 
     public void klikkembalimenu(View view){
@@ -58,6 +90,7 @@ public class SampleTiga extends AppCompatActivity {
 
         timerSeekBar = (SeekBar) findViewById(R.id.timerSeekBar);
         timerTextView = (TextView) findViewById(R.id.timerTextView);
+        timerButton = (Button) findViewById(R.id.timerButton);
 
         timerSeekBar.setMax(600);
         timerSeekBar.setProgress(30);
