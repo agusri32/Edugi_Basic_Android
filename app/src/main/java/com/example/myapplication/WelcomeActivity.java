@@ -14,15 +14,15 @@ import android.widget.Toast;
 public class WelcomeActivity extends AppCompatActivity {
 
     public void gantigambar(View view){
-        ImageView gambar1 = (ImageView) findViewById(R.id.imageViewLogo);
+        ImageView gambar1 = (ImageView) findViewById(R.id.imageViewLogo1);
         ImageView gambar2 = (ImageView) findViewById(R.id.imageViewLogo2);
 
-        gambar1.setImageResource(R.drawable.logouser1);
-        gambar2.setImageResource(R.drawable.logouser1);
-        gambar1.animate().alpha(0f).setDuration(500);
+        gambar1.setImageResource(R.drawable.logo_kunci);
+        gambar2.setImageResource(R.drawable.logo_user);
+        gambar2.animate().alpha(1f).setDuration(5000);
 
         //basic animation on java
-        gambar2.animate()
+        gambar1.animate()
                 .translationXBy(1000f)
                 .translationYBy(500f)
                 .rotationBy(600)

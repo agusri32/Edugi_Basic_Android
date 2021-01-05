@@ -29,21 +29,23 @@
         android:layout_width="144dp"
         android:layout_height="123dp"
         android:layout_marginTop="50dp"
+        android:alpha="0"
         app:layout_constraintEnd_toEndOf="@+id/textViewWelcome"
         app:layout_constraintStart_toStartOf="@+id/textViewWelcome"
         app:layout_constraintTop_toBottomOf="@+id/textViewWelcome"
-        app:srcCompat="@drawable/logouser1" />
+        app:srcCompat="@drawable/logo_user" />
 
     <ImageView
-        android:id="@+id/imageViewLogo"
+        android:id="@+id/imageViewLogo1"
         android:layout_width="144dp"
         android:layout_height="123dp"
         android:layout_marginTop="50dp"
+        android:alpha="1"
         android:onClick="gantigambar"
         app:layout_constraintEnd_toEndOf="@+id/textViewWelcome"
         app:layout_constraintStart_toStartOf="@+id/textViewWelcome"
         app:layout_constraintTop_toBottomOf="@+id/textViewWelcome"
-        app:srcCompat="@drawable/logouser1" />
+        app:srcCompat="@drawable/logo_kunci" />
 
     <TextView
         android:id="@+id/textViewDeskripsi"
@@ -55,7 +57,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/imageViewLogo2"
         app:layout_constraintStart_toStartOf="@+id/imageViewLogo2"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewLogo" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLogo1" />
 
     <Button
         android:id="@+id/buttonLogout"

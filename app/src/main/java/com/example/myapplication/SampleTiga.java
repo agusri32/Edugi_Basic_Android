@@ -17,6 +17,7 @@ public class SampleTiga extends AppCompatActivity {
     SeekBar timerSeekBar;
     TextView timerTextView;
     Button timerButton;
+    MediaPlayer mplayer;
     Boolean counterIsActive = false;
     CountDownTimer countDownTimer;
 
@@ -27,6 +28,7 @@ public class SampleTiga extends AppCompatActivity {
         timerSeekBar.setEnabled(true);
         counterIsActive = false;
         countDownTimer.cancel();
+        mplayer.stop();
     }
 
     public void updateTimer(int secondLeft){
@@ -63,7 +65,7 @@ public class SampleTiga extends AppCompatActivity {
                     timerTextView.setText("0:00");
                     Log.i("finished", "timer done");
 
-                    MediaPlayer mplayer = MediaPlayer.create(getApplicationContext(), R.raw.alarm);
+                    mplayer = MediaPlayer.create(getApplicationContext(), R.raw.adzan);
                     mplayer.start();
                 }
             }.start();

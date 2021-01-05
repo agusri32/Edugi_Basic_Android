@@ -29,7 +29,7 @@
         app:layout_constraintEnd_toEndOf="@+id/timerSeekBar"
         app:layout_constraintStart_toStartOf="@+id/timerSeekBar"
         app:layout_constraintTop_toBottomOf="@+id/timerSeekBar"
-        app:srcCompat="@drawable/logojam" />
+        app:srcCompat="@drawable/logo_timer" />
 
     <TextView
         android:id="@+id/timerTextView"

@@ -7,10 +7,8 @@ import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
-import android.widget.ListView;
 import android.widget.SeekBar;
 
 public class SampleDua extends AppCompatActivity {
@@ -24,7 +22,7 @@ public class SampleDua extends AppCompatActivity {
     }
 
     public void playaudio(View view){
-        audioplayer = MediaPlayer.create(this,R.raw.alfatihah);
+        audioplayer = MediaPlayer.create(this,R.raw.tilawah);
         audioplayer.start();
     }
 

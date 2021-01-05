@@ -16,8 +16,6 @@ import android.widget.VideoView;
 
 import java.util.ArrayList;
 
-import static java.util.Arrays.asList;
-
 public class SampleSatu extends AppCompatActivity {
 
     public void klikkembalimenu(View view){
@@ -37,7 +35,7 @@ public class SampleSatu extends AppCompatActivity {
 
         //implementasi multimedia video
         VideoView viewvideo = (VideoView) findViewById(R.id.videoView);
-        viewvideo.setVideoPath("android.resource://"+getPackageName()+"/"+R.raw.myvideo);
+        viewvideo.setVideoPath("android.resource://"+getPackageName()+"/"+R.raw.tausiah);
         MediaController mcontroller = new MediaController(this);
         mcontroller.setAnchorView(viewvideo);
         viewvideo.setMediaController(mcontroller);
