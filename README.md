@@ -1,3 +1,3 @@
-# Edugi_General_Android
+# Edugi_Basic_Android
 
-A new Android application for general code
+A new Android application for basic code
