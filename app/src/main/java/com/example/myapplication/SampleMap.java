@@ -7,10 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 
-public class SampleEmpat extends AppCompatActivity {
+public class SampleMap extends AppCompatActivity {
 
     public void klikkembalimenu(View view){
-        Intent intent = new Intent(SampleEmpat.this, MenuActivity.class);
+        Intent intent = new Intent(SampleMap.this, MenuActivity.class);
         startActivityForResult(intent,0);
     }
 
@@ -22,6 +22,6 @@ public class SampleEmpat extends AppCompatActivity {
         getSupportActionBar().hide();
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sample_empat);
+        setContentView(R.layout.activity_sample_map);
     }
 }

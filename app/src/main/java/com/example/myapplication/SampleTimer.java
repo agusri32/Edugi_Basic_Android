@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-public class SampleTiga extends AppCompatActivity {
+public class SampleTimer extends AppCompatActivity {
     SeekBar timerSeekBar;
     TextView timerTextView;
     Button timerButton;
@@ -76,7 +76,7 @@ public class SampleTiga extends AppCompatActivity {
     }
 
     public void klikkembalimenu(View view){
-        Intent intent = new Intent(SampleTiga.this, MenuActivity.class);
+        Intent intent = new Intent(SampleTimer.this, MenuActivity.class);
         startActivityForResult(intent,0);
     }
 
@@ -88,7 +88,7 @@ public class SampleTiga extends AppCompatActivity {
         getSupportActionBar().hide();
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sample_tiga);
+        setContentView(R.layout.activity_sample_timer);
 
         timerSeekBar = (SeekBar) findViewById(R.id.timerSeekBar);
         timerTextView = (TextView) findViewById(R.id.timerTextView);

@@ -16,10 +16,10 @@ import android.widget.VideoView;
 
 import java.util.ArrayList;
 
-public class SampleSatu extends AppCompatActivity {
+public class SampleVideo extends AppCompatActivity {
 
     public void klikkembalimenu(View view){
-        Intent intent = new Intent(SampleSatu.this, MenuActivity.class);
+        Intent intent = new Intent(SampleVideo.this, MenuActivity.class);
         startActivityForResult(intent,0);
     }
 
@@ -31,7 +31,7 @@ public class SampleSatu extends AppCompatActivity {
         getSupportActionBar().hide();
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sample_satu);
+        setContentView(R.layout.activity_sample_video);
 
         //implementasi multimedia video
         VideoView viewvideo = (VideoView) findViewById(R.id.videoView);

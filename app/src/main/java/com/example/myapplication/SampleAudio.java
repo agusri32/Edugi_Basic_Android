@@ -11,13 +11,13 @@ import android.view.View;
 import android.view.Window;
 import android.widget.SeekBar;
 
-public class SampleDua extends AppCompatActivity {
+public class SampleAudio extends AppCompatActivity {
 
     MediaPlayer audioplayer;
     AudioManager audiomanager;
 
     public void klikkembalimenu(View view){
-        Intent intent = new Intent(SampleDua.this, MenuActivity.class);
+        Intent intent = new Intent(SampleAudio.this, MenuActivity.class);
         startActivityForResult(intent,0);
     }
 
@@ -38,7 +38,7 @@ public class SampleDua extends AppCompatActivity {
         getSupportActionBar().hide();
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sample_dua);
+        setContentView(R.layout.activity_sample_audio);
 
         //implementasi volume sound controller
         audiomanager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);

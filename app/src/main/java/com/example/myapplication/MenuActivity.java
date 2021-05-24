@@ -15,22 +15,22 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void nextsample_satu(View view){
-        Intent intent = new Intent(MenuActivity.this, SampleSatu.class);
+        Intent intent = new Intent(MenuActivity.this, SampleVideo.class);
         startActivityForResult(intent,0);
     }
 
     public void nextsample_dua(View view){
-        Intent intent = new Intent(MenuActivity.this, SampleDua.class);
+        Intent intent = new Intent(MenuActivity.this, SampleAudio.class);
         startActivityForResult(intent,0);
     }
 
     public void nextsample_tiga(View view){
-        Intent intent = new Intent(MenuActivity.this, SampleTiga.class);
+        Intent intent = new Intent(MenuActivity.this, SampleTimer.class);
         startActivityForResult(intent,0);
     }
 
     public void nextsample_empat(View view){
-        Intent intent = new Intent(MenuActivity.this, SampleEmpat.class);
+        Intent intent = new Intent(MenuActivity.this, SampleMap.class);
         startActivityForResult(intent,0);
     }
 

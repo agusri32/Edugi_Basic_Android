@@ -29,14 +29,11 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
-        <activity android:name=".SampleEmpat" />
-        <activity android:name=".SampleTiga" />
+        <activity android:name=".SampleMap" />
+        <activity android:name=".SampleTimer" />
         <activity android:name=".MenuActivity" />
-        <activity android:name=".SampleDua" />
-        <activity android:name=".SampleSatu" />
+        <activity android:name=".SampleAudio" />
+        <activity android:name=".SampleVideo" />
         <activity android:name=".WelcomeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
